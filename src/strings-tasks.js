@@ -415,7 +415,7 @@ function getStringFromTemplate(firstName, lastName) {
  *   extractNameFromTemplate('Hello, Chuck Norris!') => 'Chuck Norris'
  */
 function extractNameFromTemplate(value) {
-  return value.slice(7).slice(0, -1);
+  return value.slice(7, -1);
 }
 
 /**
@@ -429,8 +429,8 @@ function extractNameFromTemplate(value) {
  *   unbracketTag('<span>') => 'span'
  *   unbracketTag('<a>') => 'a'
  */
-function unbracketTag(/* str */) {
-  throw new Error('Not implemented');
+function unbracketTag(str) {
+  return str.slice(1, -1);
 }
 
 /**
